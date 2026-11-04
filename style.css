@@ -1,0 +1,108 @@
+/* include padding and borders in element sizes */
+* {
+    box-sizing: border-box;
+}
+
+/* remove default spacing */
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+/* center the flight card on the screen */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #080c14;
+    color: #f3f6fc;
+    font-family: Arial, sans-serif;
+}
+
+/* main container for the flight details */
+.flight-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 32px;
+    background-color: #121b2b;
+    border: 1px solid #29364c;
+    border-radius: 20px;
+}
+
+/* small labels above the values */
+.label {
+    color: #a6b5cc;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* space between the top label and airline name */
+header {
+    margin-top: 24px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+/* flight number below the airline */
+#callsign {
+    margin-top: 8px;
+    color: #65d9ef;
+    font-size: 20px;
+}
+
+/* arrange airports and arrow in one row */
+.route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px 0;
+}
+
+.route h2 {
+    margin-top: 8px;
+    font-size: 56px;
+}
+
+.arrow {
+    color: #65d9ef;
+    font-size: 36px;
+}
+
+/* arrange aircraft details in three columns */
+.details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid #29364c;
+}
+
+/* add spacing above each detail's value */
+.details .label {
+    margin-bottom: 8px;
+}
+
+/* reduce sizes on smaller screens */
+@media (max-width: 420px) {
+    .flight-card {
+        padding: 20px;
+    }
+
+    .route h2 {
+        font-size: 40px;
+    }
+
+    .details {
+        gap: 8px;
+    }
+
+    .label {
+        letter-spacing: 1px;
+    }
+}

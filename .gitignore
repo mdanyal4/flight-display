@@ -1,0 +1,8 @@
+# Generated local output
+flight.json
+
+# Python cache and local configuration
+__pycache__/
+*.py[cod]
+.env
+.DS_Store

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- fit the page to the screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flight Display</title>
+
+    <!-- load styles from the css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- javascript fills in the latest flight details -->
+    <main class="flight-card">
+        <!-- show whether flight data is available -->
+        <p class="label" id="status" role="status">Loading flight data...</p>
+
+        <!-- airline name and flight number -->
+        <header>
+            <h1 id="airline">—</h1>
+            <p id="callsign">—</p>
+        </header>
+
+        <!-- departure and arrival airport codes -->
+        <section class="route" aria-label="Flight route">
+            <div>
+                <p class="label">From</p>
+                <h2 id="departure">—</h2>
+            </div>
+
+            <span class="arrow" aria-hidden="true">→</span>
+
+            <div>
+                <p class="label">To</p>
+                <h2 id="arrival">—</h2>
+            </div>
+        </section>
+
+        <!-- aircraft type, altitude, and distance -->
+        <section class="details" aria-label="Aircraft details">
+            <div>
+                <p class="label">Aircraft</p>
+                <p id="aircraft">—</p>
+            </div>
+
+            <div>
+                <p class="label">Altitude</p>
+                <p><span id="altitude">—</span> ft</p>
+            </div>
+
+            <div>
+                <p class="label">Distance</p>
+                <p><span id="distance">—</span> nm</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- load javascript to update flight details -->
+    <script src="script.js"></script>
+</body>
+</html>
